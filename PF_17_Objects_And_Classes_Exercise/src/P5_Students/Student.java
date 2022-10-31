@@ -1,0 +1,25 @@
+package P5_Students;
+
+import java.text.DecimalFormat;
+
+public class Student {
+    private String firstName;
+    private String lastName;
+    private double grade;
+
+    public Student(String firstName, String lastName, double grade) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.grade = grade;
+    }
+
+    public double getGrade() {
+        return grade;
+    }
+
+    @Override
+    public String toString() {
+        DecimalFormat decimalFormat = new DecimalFormat("0.00");
+        return firstName + " " + lastName + ": " + decimalFormat.format(grade);
+    }
+}
